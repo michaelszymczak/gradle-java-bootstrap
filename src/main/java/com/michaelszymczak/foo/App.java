@@ -1,4 +1,4 @@
-package com.michaelszymczak.acme;
+package com.michaelszymczak.foo;
 
 
 public class App {

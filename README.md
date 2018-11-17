@@ -1,9 +1,16 @@
-# Acme
+#  Gradle bootstrap project.
 
-You can replace each acme string with the current app name
+Built using the following commands.
 
-## To run
+    gradle wrapper --gradle-version=4.10.2
+    ./gradlew init --type java-application
 
-    ./gradlew clean build && java -jar build/libs/acmeApp-0.1.jar
 
+To run:
+
+    ./gradlew clean build shadowJar
+    java -jar build/libs/foo-0.1-all.jar
+    
+    # or
+    ./gradlew clean build runShadow
 

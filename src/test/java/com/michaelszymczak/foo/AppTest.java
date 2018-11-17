@@ -1,13 +1,11 @@
-package com.michaelszymczak.acme;
+package com.michaelszymczak.foo;
 
-import org.junit.Ignore;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 public class AppTest {
 
-    @Ignore("not implemented yet")
     @Test
     public void welcomes_you() throws Exception {
         App app = new App();
