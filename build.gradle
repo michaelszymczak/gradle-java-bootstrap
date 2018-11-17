@@ -1,6 +1,17 @@
-apply plugin: 'java'
-apply plugin: 'application'
-apply plugin: "com.github.johnrengelman.shadow"
+plugins {
+    id 'java'
+    id 'application'
+    id "com.github.johnrengelman.shadow" version "4.0.2"
+}
+
+dependencies {
+    compile 'com.google.guava:guava:23.0'
+    testCompile 'junit:junit:4.12'
+}
+
+repositories {
+    jcenter()
+}
 
 mainClassName = 'com.michaelszymczak.foo.App'
 sourceCompatibility = 1.8
@@ -8,27 +19,3 @@ sourceCompatibility = 1.8
 version = "0.1"
 description = "Foo app"
 
-buildscript {
-    repositories {
-        jcenter()
-        maven {
-            url "https://plugins.gradle.org/m2/"
-        }
-    }
-    dependencies {
-        classpath "com.github.jengelman.gradle.plugins:shadow:4.0.2"
-    }
-}
-
-repositories {
-    jcenter()
-}
-
-
-dependencies {
-    compile 'org.slf4j:slf4j-api:1.7.7'
-
-    testCompile 'junit:junit:4.12'
-    testCompile 'org.mockito:mockito-all:1.8.4'
-
-}

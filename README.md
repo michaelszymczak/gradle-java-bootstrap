@@ -8,9 +8,9 @@ Built using the following commands.
 
 To run:
 
-    ./gradlew clean build shadowJar
-    java -jar build/libs/foo-0.1-all.jar
-    
-    # or
     ./gradlew clean build runShadow
+    
+To build jar and run:
+
+    ./gradlew clean build shadowJar && java -jar build/libs/foo-0.1-all.jar
 
