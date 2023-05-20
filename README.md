@@ -10,3 +10,9 @@ Requirements:
 ./gradlew clean check installShadowDist && ./app/build/install/app-shadow/bin/app
 ```
 
+### To run jcstress
+
+```bash
+./gradlew clean jcstress
+```
+

@@ -10,6 +10,14 @@ plugins {
     // Apply the application plugin to add support for building a CLI application in Java.
     id 'com.github.johnrengelman.shadow' version '8.1.1'
     id 'application'
+    id "io.github.reyerizo.gradle.jcstress" version "0.8.15"
+}
+
+jcstress {
+    jcstressDependency 'org.openjdk.jcstress:jcstress-core:0.16'
+    includeTests = true
+    verbose = false
+    mode = project.getProperties().getOrDefault("mode", "quick")
 }
 
 repositories {
