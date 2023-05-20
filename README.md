@@ -1,16 +1,12 @@
 #  Gradle bootstrap project.
 
-Built using the following commands.
+Requirements:
 
-    gradle wrapper --gradle-version=4.10.2
-    ./gradlew init --type java-application
+- Java 17
 
+### To run
 
-To run:
-
-    ./gradlew clean build runShadow
-    
-To build jar and run:
-
-    ./gradlew clean build shadowJar && java -jar build/libs/foo-0.1-all.jar
+```bash
+./gradlew clean check installShadowDist && ./app/build/install/app-shadow/bin/app
+```
 
